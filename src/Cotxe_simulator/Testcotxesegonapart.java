@@ -1,3 +1,5 @@
+package Cotxe_simulator;
+
 public class Testcotxesegonapart {
     public static void main(String[] args) {
         CotxeSegonaPart_Joshua_Mas c1= new CotxeSegonaPart_Joshua_Mas("Ferrari", "asd", TipusCanvi.CanviManual);

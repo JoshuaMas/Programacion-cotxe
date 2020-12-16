@@ -1,6 +1,8 @@
+package Cotxe_simulator;
+
 /*
 
--Project: Coche_Joshua_Mas
+-Project: Cotxe_simulator.Coche_Joshua_Mas
 
 -Date: 10/12/2020
 

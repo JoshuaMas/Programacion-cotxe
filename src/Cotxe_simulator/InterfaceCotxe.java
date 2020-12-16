@@ -1,3 +1,5 @@
+package Cotxe_simulator;
+
 /*
 
 -Project: Cotxe_Joshua_Mas
@@ -16,7 +18,7 @@ public interface InterfaceCotxe {
     public void arrancarMotor() throws Exception;
     /**
      * El metode comprovaMotor retornara l'estat del motor
-     * segons els possibles valors de l'enum type EstatsMotorCotxe
+     * segons els possibles valors de l'enum type Cotxe_simulator.EstatsMotorCotxe
      * @return
      */
     public EstatsMotorCotxe comprovaMotor();

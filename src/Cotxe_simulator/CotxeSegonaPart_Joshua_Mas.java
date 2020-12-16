@@ -1,3 +1,5 @@
+package Cotxe_simulator;
+
 public class CotxeSegonaPart_Joshua_Mas extends Coche_Joshua_Mas {
     // Atributos
     private MarxesA estatmarxaA = MarxesA.N;
