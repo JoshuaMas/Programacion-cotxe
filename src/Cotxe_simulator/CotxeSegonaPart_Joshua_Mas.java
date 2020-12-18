@@ -1,4 +1,12 @@
 package Cotxe_simulator;
+/*
+        -Project: Programacion-cotxe
+
+        -Date: 11/12/2020
+
+        -Created by: Joshua Mas
+
+        */
 enum MarxesA{
     F,
     N,
@@ -19,7 +27,8 @@ enum Aireacondicionat {
     Tancat;
 }
 
-
+/** En esta actividad actualizamos el programa del simulador de coche añadiendo 4 metodos,
+ * Cambiar las marchas del coche según si es automatico o manual, además de encender y apagar el aire acondicionado. **/
 
 public class CotxeSegonaPart_Joshua_Mas extends Coche_Joshua_Mas {
     // Atributos
@@ -47,12 +56,12 @@ public class CotxeSegonaPart_Joshua_Mas extends Coche_Joshua_Mas {
         this.aireacondicionat = aireacondicionat;
     }
 
-    //Constructor
+    // Constructor
     CotxeSegonaPart_Joshua_Mas(String marca, String model, TipusCanvi tipuscanvi) {
         super(marca, model, tipuscanvi);
     }
 
-    //Creamos un metodo para cambiar las marchas entre modo Forward, Neutro o Hacia atrás.
+    // Creamos un metodo para cambiar las marchas en un coche automatico.
     public void canmbiarmarxaA(char a) throws Exception {
         if (tipuscanvi == TipusCanvi.CanviAutomatic &&  a == '+') {
             if (this.estatmarxaA.equals(MarxesA.N)) {
@@ -74,7 +83,7 @@ public class CotxeSegonaPart_Joshua_Mas extends Coche_Joshua_Mas {
                 System.out.println("no puedes bajar más marchas.");
         } else throw new Exception("Solo puedes poner + o - y tiene que ser un coche automatico.");
     }
-
+    // Creamos un metodo para cambiar las marchas en un coche manual.
     public void canmbiarmarxaM(char b) throws Exception {
         if (tipuscanvi == TipusCanvi.CanviManual && b == '+') {
             if (this.estatmarxaM.equals(MarxesM.N)) {
@@ -128,12 +137,14 @@ public class CotxeSegonaPart_Joshua_Mas extends Coche_Joshua_Mas {
             }
         } else throw new Exception("Solo puedes poner + o - y el coche tiene que ser manual. ");
     }
+    // Metodo para encender el aire acondicionado.
     public void encenderAire() throws Exception {
         if (this.aireacondicionat == Aireacondicionat.Tancat) {
             this.aireacondicionat = Aireacondicionat.Obert;
         } else throw new Exception("El aire ya esta encendido ");
 
     }
+    // Metodo para apagar el aire acondicionado.
     public void apagarAire() throws Exception{
         if (this.aireacondicionat==Aireacondicionat.Obert){
             this.aireacondicionat=Aireacondicionat.Tancat;
