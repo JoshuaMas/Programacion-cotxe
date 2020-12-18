@@ -47,6 +47,7 @@ public class CotxeSegonaPart_Joshua_Mas extends Coche_Joshua_Mas {
         return estatmarxaM;
     }
 
+    // Constructor
     public CotxeSegonaPart_Joshua_Mas(String marca, String model, TipusCanvi tipuscanvi, MarxesA estatmarxaA, MarxesM estatmarxaM, MarxesA marxaA, MarxesM marxaM) {
         super(marca, model, tipuscanvi);
         this.estatmarxaA = estatmarxaA;
@@ -56,7 +57,7 @@ public class CotxeSegonaPart_Joshua_Mas extends Coche_Joshua_Mas {
         this.aireacondicionat = aireacondicionat;
     }
 
-    // Constructor
+    // Constructor default
     CotxeSegonaPart_Joshua_Mas(String marca, String model, TipusCanvi tipuscanvi) {
         super(marca, model, tipuscanvi);
     }
