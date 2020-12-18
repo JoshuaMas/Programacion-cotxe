@@ -1,9 +1,33 @@
 package Cotxe_simulator;
+enum MarxesA{
+    F,
+    N,
+    R;
+}
+enum MarxesM {
+    R,
+    N,
+    m1,
+    m2,
+    m3,
+    m4,
+    m5,
+    m6;
+}
+enum Aireacondicionat {
+    Obert,
+    Tancat;
+}
+
+
 
 public class CotxeSegonaPart_Joshua_Mas extends Coche_Joshua_Mas {
     // Atributos
     private MarxesA estatmarxaA = MarxesA.N;
     private MarxesM estatmarxaM = MarxesM.N;
+    private MarxesA marxaA;
+    private MarxesM marxaM;
+    private Aireacondicionat aireacondicionat = Aireacondicionat.Tancat;
 
 
     public MarxesA getEstatmarxaA() {
@@ -14,17 +38,26 @@ public class CotxeSegonaPart_Joshua_Mas extends Coche_Joshua_Mas {
         return estatmarxaM;
     }
 
+    public CotxeSegonaPart_Joshua_Mas(String marca, String model, TipusCanvi tipuscanvi, MarxesA estatmarxaA, MarxesM estatmarxaM, MarxesA marxaA, MarxesM marxaM) {
+        super(marca, model, tipuscanvi);
+        this.estatmarxaA = estatmarxaA;
+        this.estatmarxaM = estatmarxaM;
+        this.marxaA = marxaA;
+        this.marxaM = marxaM;
+        this.aireacondicionat = aireacondicionat;
+    }
+
     //Constructor
     CotxeSegonaPart_Joshua_Mas(String marca, String model, TipusCanvi tipuscanvi) {
         super(marca, model, tipuscanvi);
     }
 
     //Creamos un metodo para cambiar las marchas entre modo Forward, Neutro o Hacia atrás.
-    public void canviarmarxaA(char a) throws Exception {
-        if (a == '+') {
+    public void canmbiarmarxaA(char a) throws Exception {
+        if (tipuscanvi == TipusCanvi.CanviAutomatic &&  a == '+') {
             if (this.estatmarxaA.equals(MarxesA.N)) {
                 this.estatmarxaA = MarxesA.F;
-                System.out.println("Modo rápido y furioso.");
+                System.out.println("Modo forward.");
             } else if (this.estatmarxaA.equals(MarxesA.R)) {
                 this.estatmarxaA = MarxesA.N;
                 System.out.println("Modo neutro.");
@@ -39,11 +72,11 @@ public class CotxeSegonaPart_Joshua_Mas extends Coche_Joshua_Mas {
                 System.out.println("Modo Neutro.");
             } else if (this.estatmarxaA.equals(MarxesA.R))
                 System.out.println("no puedes bajar más marchas.");
-        } else throw new Exception("Solo puedes poner + o -");
+        } else throw new Exception("Solo puedes poner + o - y tiene que ser un coche automatico.");
     }
 
-    public void canviarmarxaM(char b) throws Exception {
-        if (b == '+') {
+    public void canmbiarmarxaM(char b) throws Exception {
+        if (tipuscanvi == TipusCanvi.CanviManual && b == '+') {
             if (this.estatmarxaM.equals(MarxesM.N)) {
                 this.estatmarxaM = MarxesM.m1;
                 System.out.println("Estableciendo la marcha 1.");
@@ -93,7 +126,51 @@ public class CotxeSegonaPart_Joshua_Mas extends Coche_Joshua_Mas {
             } else if (this.estatmarxaM.equals(MarxesM.R)) {
                 System.out.println("No puedes bajar más marchas.");
             }
-        } else throw new Exception("Solo puedes poner + o -");
+        } else throw new Exception("Solo puedes poner + o - y el coche tiene que ser manual. ");
+    }
+    public void encenderAire() throws Exception {
+        if (this.aireacondicionat == Aireacondicionat.Tancat) {
+            this.aireacondicionat = Aireacondicionat.Obert;
+        } else throw new Exception("El aire ya esta encendido ");
+
+    }
+    public void apagarAire() throws Exception{
+        if (this.aireacondicionat==Aireacondicionat.Obert){
+            this.aireacondicionat=Aireacondicionat.Tancat;
+        }else throw new Exception("El aire ya esta apagado");
+}
+
+    // Getters & Setters
+
+    public void setEstatmarxaA(MarxesA estatmarxaA) {
+        this.estatmarxaA = estatmarxaA;
     }
 
+    public void setEstatmarxaM(MarxesM estatmarxaM) {
+        this.estatmarxaM = estatmarxaM;
+    }
+
+    public MarxesA getMarxaA() {
+        return marxaA;
+    }
+
+    public void setMarxaA(MarxesA marxaA) {
+        this.marxaA = marxaA;
+    }
+
+    public MarxesM getMarxaM() {
+        return marxaM;
+    }
+
+    public void setMarxaM(MarxesM marxaM) {
+        this.marxaM = marxaM;
+    }
+
+    public Aireacondicionat getAireacondicionat() {
+        return aireacondicionat;
+    }
+
+    public void setAireacondicionat(Aireacondicionat aireacondicionat) {
+        this.aireacondicionat = aireacondicionat;
+    }
 }
