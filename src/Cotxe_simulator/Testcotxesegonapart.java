@@ -12,13 +12,15 @@ public class Testcotxesegonapart {
             c1.CanviarMarxaManual(MarxesManual.G1);
             c1.CanviarMarxaManual(MarxesManual.G2);
             c1.CanviarMarxaManual(MarxesManual.G3);
+            c1.CanviarMarxaManual(MarxesManual.G3);
             c1.CanviarMarxaManual(MarxesManual.G4);
             c1.CanviarMarxaManual(MarxesManual.G5);
             c1.CanviarMarxaManual(MarxesManual.G6);
+
             c2.arrancarMotor();
-            c2.CanviarMarxaAutomatic(MarxesAutomatic.F);
+            /*c2.CanviarMarxaAutomatic(MarxesAutomatic.F);
             c2.CanviarMarxaAutomatic(MarxesAutomatic.N);
-            c2.CanviarMarxaAutomatic(MarxesAutomatic.R);
+            c2.CanviarMarxaAutomatic(MarxesAutomatic.R);*/
 
 
 

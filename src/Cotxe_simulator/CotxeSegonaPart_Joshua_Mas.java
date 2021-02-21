@@ -48,6 +48,7 @@ public class CotxeSegonaPart_Joshua_Mas extends Cotxe_Joshua_Mas {
                         } else if (marxa == MarxesAutomatic.R) {
                             this.estatmarxaA = MarxesAutomatic.R;
                             System.out.println("R");
+                        }else if( marxa == MarxesAutomatic.N ){
                         } else throw new Exception("Marxa incorrecta");
 
                         // Si estamos en la marxa F...
@@ -56,6 +57,7 @@ public class CotxeSegonaPart_Joshua_Mas extends Cotxe_Joshua_Mas {
                         if (marxa == MarxesAutomatic.N) {
                             estatmarxaA = MarxesAutomatic.N;
                             System.out.println("N");
+                        }else if( marxa == MarxesAutomatic.F ){
                         } else throw new Exception("Marxa incorrecta");
 
                         // Si estamos en la marxa R...
@@ -64,7 +66,8 @@ public class CotxeSegonaPart_Joshua_Mas extends Cotxe_Joshua_Mas {
                         if (marxa == MarxesAutomatic.N) {
                             this.estatmarxaA = MarxesAutomatic.N;
                             System.out.println("N");
-                        } else throw new Exception("Marxa incorrecta");
+                        }else if( marxa == MarxesAutomatic.R ){
+                        }  else throw new Exception("Marxa incorrecta");
                     }
                 } else throw new Exception("Marxa incorrecta");
             } else throw new Exception("Cotxe manual. No pots fer un canvi automàtic");
@@ -87,7 +90,8 @@ public class CotxeSegonaPart_Joshua_Mas extends Cotxe_Joshua_Mas {
                         if (marxa2 == MarxesManual.N) {
                             this.estatmarxaM = MarxesManual.N;
                             System.out.println("N");
-                        } else throw new Exception("Marxa incorrecta");
+                        }else if( marxa2 == MarxesManual.R ){
+                        }  else throw new Exception("Marxa incorrecta");
 
 // Si estamos en la marxa N...
 
@@ -98,7 +102,8 @@ public class CotxeSegonaPart_Joshua_Mas extends Cotxe_Joshua_Mas {
                         } else if (marxa2 == MarxesManual.R) {
                             this.estatmarxaM = MarxesManual.R;
                             System.out.println("R");
-                        } else throw new Exception("Marxa incorrecta");
+                        }else if( marxa2 == MarxesManual.N ){
+                        }  else throw new Exception("Marxa incorrecta");
 
 // Si estamos en la marxa G1...
 
@@ -109,7 +114,8 @@ public class CotxeSegonaPart_Joshua_Mas extends Cotxe_Joshua_Mas {
                         } else if (marxa2 == MarxesManual.G2) {
                             this.estatmarxaM = MarxesManual.G2;
                             System.out.println("G2");
-                        } else throw new Exception("Marxa incorrecta");
+                        }else if( marxa2 == MarxesManual.G1 ){
+                        }  else throw new Exception("Marxa incorrecta");
 
 // Si estamos en la marxa G2...
 
@@ -120,7 +126,8 @@ public class CotxeSegonaPart_Joshua_Mas extends Cotxe_Joshua_Mas {
                         } else if (marxa2 == MarxesManual.G3) {
                             this.estatmarxaM = MarxesManual.G3;
                             System.out.println("G3");
-                        } else throw new Exception("Marxa incorrecta");
+                        }else if( marxa2 == MarxesManual.G2 ){
+                        }  else throw new Exception("Marxa incorrecta");
 
 // Si estamos en la marxa G3...
 
@@ -131,6 +138,7 @@ public class CotxeSegonaPart_Joshua_Mas extends Cotxe_Joshua_Mas {
                         } else if (marxa2 == MarxesManual.G4) {
                             this.estatmarxaM = MarxesManual.G4;
                             System.out.println("G4");
+                        }else if (marxa2 == MarxesManual.G3){
                         } else throw new Exception("Marxa incorrecta");
 
 // Si estamos en la marxa G4...
@@ -142,6 +150,7 @@ public class CotxeSegonaPart_Joshua_Mas extends Cotxe_Joshua_Mas {
                         } else if (marxa2 == MarxesManual.G5) {
                             this.estatmarxaM = MarxesManual.G5;
                             System.out.println("G5");
+                        }else if (marxa2 == MarxesManual.G4){
                         } else throw new Exception("Marxa incorrecta");
 
 // Si estamos en la marxa G5...
@@ -153,7 +162,8 @@ public class CotxeSegonaPart_Joshua_Mas extends Cotxe_Joshua_Mas {
                         } else if (marxa2 == MarxesManual.G6) {
                             this.estatmarxaM = MarxesManual.G6;
                             System.out.println("G6");
-                        } else throw new Exception("Marxa incorrecta");
+                        }else if (marxa2 == MarxesManual.G5){
+                        }else throw new Exception("Marxa incorrecta");
 
 // Si estamos en la marxa G6...
 
@@ -161,6 +171,7 @@ public class CotxeSegonaPart_Joshua_Mas extends Cotxe_Joshua_Mas {
                         if (marxa2 == MarxesManual.G5) {
                             this.estatmarxaM = MarxesManual.G5;
                             System.out.println("G5");
+                        }else if( marxa2 == MarxesManual.G6 ){
                         } else throw new Exception("Marxa incorrecta");
                     }
                 } else throw new Exception("Marxa incorrecta");
