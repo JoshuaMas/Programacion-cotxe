@@ -7,20 +7,18 @@ public class Testcotxesegonapart {
         try {
 
             c1.arrancarMotor();
-            /*c1.CanviarMarxaAutomatic(MarxesA.F);
-            c1.CanviarMarxaAutomatic(MarxesA.R);*/
-            c1.CanviarMarxaManual(MarxesM.R);
-            c1.CanviarMarxaManual(MarxesM.N);
-            c1.CanviarMarxaManual(MarxesM.G1);
-            c1.CanviarMarxaManual(MarxesM.G2);
-            c1.CanviarMarxaManual(MarxesM.G3);
-            c1.CanviarMarxaManual(MarxesM.G4);
-            c1.CanviarMarxaManual(MarxesM.G5);
-            c1.CanviarMarxaManual(MarxesM.G6);
+            c1.CanviarMarxaManual(MarxesManual.R);
+            c1.CanviarMarxaManual(MarxesManual.N);
+            c1.CanviarMarxaManual(MarxesManual.G1);
+            c1.CanviarMarxaManual(MarxesManual.G2);
+            c1.CanviarMarxaManual(MarxesManual.G3);
+            c1.CanviarMarxaManual(MarxesManual.G4);
+            c1.CanviarMarxaManual(MarxesManual.G5);
+            c1.CanviarMarxaManual(MarxesManual.G6);
             c2.arrancarMotor();
-            c2.CanviarMarxaAutomatic(MarxesA.F);
-            c2.CanviarMarxaAutomatic(MarxesA.N);
-            c2.CanviarMarxaAutomatic(MarxesA.R);
+            c2.CanviarMarxaAutomatic(MarxesAutomatic.F);
+            c2.CanviarMarxaAutomatic(MarxesAutomatic.N);
+            c2.CanviarMarxaAutomatic(MarxesAutomatic.R);
 
 
 
