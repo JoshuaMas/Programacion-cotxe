@@ -4,20 +4,19 @@ package Cotxe_simulator;
 
 -Project: Cotxe_Joshua_Mas
 
--Date: 04/12/2020
+-Date: 21/02/2021
 
 -Created by: Joshua Mas
 
 */
-//aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-public class Coche_Joshua_Mas extends CotxeAbstracte {
+public class Cotxe_Joshua_Mas extends CotxeAbstracte {
 
     // Atributos
-    private EstatsMotorCotxe estado = EstatsMotorCotxe.Aturat;
+    public EstatsMotorCotxe estado = EstatsMotorCotxe.Aturat;
     int revoluciones = 0;
 
     // Constructor
-    Coche_Joshua_Mas(String marca, String model, TipusCanvi tipuscanvi) {
+    Cotxe_Joshua_Mas(String marca, String model, TipusCanvi tipuscanvi) {
         super(marca, model, tipuscanvi);
     }
 
@@ -25,9 +24,9 @@ public class Coche_Joshua_Mas extends CotxeAbstracte {
     public void arrancarMotor() throws Exception {
         if (estado.equals(EstatsMotorCotxe.Aturat)) {
             this.estado = EstatsMotorCotxe.EnMarxa;
+            System.out.println("cotxe ences");
         } else
-            throw new Exception("El motor ya esta encendidmo");
-
+            throw new Exception("El cotxe ja està en marxa");
     }
 
     // Comprobamos el estado del motor, es decir, si está encendido o no.
@@ -43,11 +42,12 @@ public class Coche_Joshua_Mas extends CotxeAbstracte {
             revoluciones = (int) (Math.random() * 6500 + 1);
         return revoluciones;
     }
-
+    // Paramos el motor.
     public void aturarMotor() throws Exception {
         if (estado.equals(EstatsMotorCotxe.EnMarxa)) {
             this.estado = EstatsMotorCotxe.Aturat;
+            System.out.println("Cotxe aturat");
         } else
-            throw new Exception("El motor ya esta apagado");
+            throw new Exception("El cotxe ja està aturat");
     }
 }

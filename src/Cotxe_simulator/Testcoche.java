@@ -10,7 +10,7 @@ package Cotxe_simulator;
 
 */
 public class Testcoche {    public static void main(String[] args) throws Exception {
-    Coche_Joshua_Mas c1= new Coche_Joshua_Mas("Ferrari","xD",TipusCanvi.CanviAutomatic);
+    Cotxe_Joshua_Mas c1= new Cotxe_Joshua_Mas("Ferrari","xD",TipusCanvi.CanviAutomatic);
 
     System.out.println(c1.getRevolucions());
     System.out.println(c1.comprovaMotor());

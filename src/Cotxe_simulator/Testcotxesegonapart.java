@@ -2,20 +2,42 @@ package Cotxe_simulator;
 
 public class Testcotxesegonapart {
     public static void main(String[] args) {
-        CotxeSegonaPart_Joshua_Mas c1= new CotxeSegonaPart_Joshua_Mas("Ferrari", "asd", TipusCanvi.CanviAutomatic);
+        CotxeSegonaPart_Joshua_Mas c1= new CotxeSegonaPart_Joshua_Mas("Ferrari", "asd", TipusCanvi.CanviManual);
+        CotxeSegonaPart_Joshua_Mas c2= new CotxeSegonaPart_Joshua_Mas("HI","lugsia", TipusCanvi.CanviAutomatic);
         try {
-            c1.canmbiarmarxaA('+');
+
+            c1.arrancarMotor();
+            /*c1.CanviarMarxaAutomatic(MarxesA.F);
+            c1.CanviarMarxaAutomatic(MarxesA.R);*/
+            c1.CanviarMarxaManual(MarxesM.R);
+            c1.CanviarMarxaManual(MarxesM.N);
+            c1.CanviarMarxaManual(MarxesM.G1);
+            c1.CanviarMarxaManual(MarxesM.G2);
+            c1.CanviarMarxaManual(MarxesM.G3);
+            c1.CanviarMarxaManual(MarxesM.G4);
+            c1.CanviarMarxaManual(MarxesM.G5);
+            c1.CanviarMarxaManual(MarxesM.G6);
+            c2.arrancarMotor();
+            c2.CanviarMarxaAutomatic(MarxesA.F);
+            c2.CanviarMarxaAutomatic(MarxesA.N);
+            c2.CanviarMarxaAutomatic(MarxesA.R);
+
+
+
+            /*c1.aturarMotor();*/
+            /*c1.CanviarMarxaAutomatic(MarxesA.F);
             System.out.println(c1.getEstatmarxaM());
-            c1.canmbiarmarxaA('-');
-            System.out.println(c1.getEstatmarxaM());
-            c1.encenderAire();
-            System.out.println(c1.getAireacondicionat());
-            c1.apagarAire();
-            System.out.println(c1.getAireacondicionat());
-            c1.apagarAire();
+            c1.CanviarMarxaAutomatic(MarxesA.N);
+            System.out.println(c1.getEstatmarxaM());*/
+
 
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 }
+/*            c1.encenderAire();
+            System.out.println(c1.getAireacondicionat());
+            c1.apagarAire();
+            System.out.println(c1.getAireacondicionat());
+            c1.apagarAire();*/
